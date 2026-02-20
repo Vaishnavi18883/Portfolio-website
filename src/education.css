@@ -1,0 +1,31 @@
+.edu{
+    /* border: 2px solid red; */
+    width: 90vw;
+    padding-left: 8vw;
+    line-height: 2px;
+}
+.class{
+/* border: 2px solid rosybrown; */
+margin-right: 10vw;
+background-color: rgb(23, 23, 23);
+border-radius: 10px;
+margin-bottom: 20px;
+}
+.university{
+    display: flex;
+    color: antiquewhite;
+    justify-content: space-around;
+}
+.percent{
+    color: rgb(247, 201, 103);
+}
+
+.class>p{
+    color: antiquewhite;
+    font-size: large;
+    font-weight: 800;
+}
+.class:hover{
+    background: #323232;
+background: linear-gradient(90deg, rgb(54, 53, 53) 14%, rgb(96, 94, 94) 80%);
+}

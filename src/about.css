@@ -1,0 +1,59 @@
+.about{
+    width: 96vw;
+   margin-top: 60px;
+    /* border: 2px solid red; */
+    /* display: flex; */
+
+}
+.title{
+    color: white;
+    margin-left: 43vw;
+    font-weight:400 ;
+}
+.titletwo{
+    color: rgb(34, 186, 224);
+    margin-left: 44vw;
+}
+.aboutme{
+    display: flex;
+    gap: 80px;
+}
+.bg{
+    height: 200px;
+    width: 190px;
+    background: #0d0d47;
+background: linear-gradient(90deg, rgba(13, 13, 71, 1) 19%, rgba(71, 160, 201, 1) 63%);
+    margin-left: 10.3vw;
+    position: relative;
+    top: 40px;
+    border-radius: 10px;
+    
+}
+
+.pic>img{
+padding-left: 10.5vw;
+height: 200px;
+position: relative;
+top: -160px;
+border-radius: 10px;
+transform: rotate(10deg);
+transition: transform 0.7s ease-in-out;
+}
+.pic>img:hover{
+    transform: rotate(0deg);
+}
+.info>p{
+    /* border: 2px solid yellow; */
+    padding: 10px;
+    color: rgb(145, 145, 145);
+    margin-top: -140px;
+    font-weight: 500;
+    font-size:1.3em ;
+    line-height: 1.5;
+}
+.info>button{
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-left: 50px;
+}

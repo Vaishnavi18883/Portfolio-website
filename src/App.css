@@ -1,0 +1,13 @@
+body{
+  background-color: rgb(68, 68, 68);
+  /* background-color: rgb(250, 230, 230); */
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url("https://i.pinimg.com/736x/92/70/c1/9270c19eb7d37366c20da05e28844248.jpg");
+  height: 100vh;
+  background-size: cover;
+  width: 80vw;
+}
+html {
+  scroll-behavior: smooth;
+}
+

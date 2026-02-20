@@ -1,0 +1,28 @@
+.footer{
+    
+  width: 98vw;
+  height: 38vh;
+  background-color: #5895ba;
+}
+.footer>h2{
+  margin-left: 40vw;
+  padding-top: 30px;
+}
+.head{
+  margin-left: 30vw;
+}
+.head>a{
+    margin-right: 5vw;
+    font-size: large;
+    font-weight: 700;
+}
+
+.link>a>img{
+ height: 40px;
+border-radius: 50px;
+margin: 25px 20px 0px 50px;
+
+}
+.link{
+  padding-left: 30vw;
+}

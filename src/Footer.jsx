@@ -1,0 +1,30 @@
+import React from "react";
+import './footer.css'
+import { HashLink } from "react-router-hash-link";
+
+const Footer = (() => {
+    return (
+        <>
+            <div className="footer">
+                <h2>Vaishnavi D. Patil</h2>
+                <div className="head">
+                    <HashLink smooth to="/#hero">Home</HashLink>
+                    <HashLink smooth to="/#about">About</HashLink>
+                    <HashLink smooth to="/#skill">Skills</HashLink>
+                    <HashLink smooth to="/#education">Education</HashLink>
+                    <HashLink smooth to="/#contact">Contact</HashLink>
+                </div>
+
+
+                <div className="link">
+                    <a href="https://www.linkedin.com/in/vaishnavi-patil-714a97320/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTczeYT0zSJsPvP0KbFJDJ68aXAXWp4cm3nkg&ss" alt="" /></a>
+                    <a href="https://github.com/Vaishnavi18883/vaishnavi.git"><img src="https://images.seeklogo.com/logo-png/50/2/github-icon-logo-png_seeklogo-503247.png" alt="" /></a>
+
+                </div>
+
+            </div>
+        </>
+    )
+})
+export default Footer;
+
