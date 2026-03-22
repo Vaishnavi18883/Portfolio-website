@@ -1,55 +1,143 @@
-.hero{
-    width: 66vw;
-    display: flex;
-    gap: 50px;
-    margin-top: 40px;
-    padding-left: 32vw;
-    /* border: 2px solid burlywood; */
-
+/* ── HERO ── */
+.hero {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 5vw 4rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.9s ease both;
 }
 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
+/* Animated glow blobs */
+.hero::before, .hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 0;
+}
+.hero::before {
+  width: 420px; height: 420px;
+  background: rgba(123, 92, 250, 0.14);
+  top: -80px; right: 10vw;
+  animation: blobFloat 8s ease-in-out infinite alternate;
+}
+.hero::after {
+  width: 300px; height: 300px;
+  background: rgba(79, 158, 248, 0.1);
+  bottom: 0; left: 5vw;
+  animation: blobFloat 10s ease-in-out infinite alternate-reverse;
+}
+@keyframes blobFloat {
+  from { transform: translateY(0) scale(1); }
+  to   { transform: translateY(30px) scale(1.08); }
+}
 
-.links>a>img{
-height: 30px;
-border-radius: 50px;
-margin-top: 25px;
-/* margin-left: 200px; */
-display: flex;
+/* Social links column */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+  animation: fadeInLeft 0.8s 0.2s ease both;
 }
-.intro{
-    /* border: 2px solid red; */
-    color: white;
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
-.intro>h6{
-    font-size: 18px;
-    color: rgb(135, 135, 188);
+.links > a > img {
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
 }
-.intro> button {
-    padding: 10px;
-    margin-right:10px ;
-    border-radius: 5px;
-   font-weight: 700;
+.links > a > img:hover {
+  transform: scale(1.18) rotate(5deg);
+  box-shadow: 0 0 18px rgba(79, 158, 248, 0.5);
+  border-color: var(--accent);
+}
 
-    
+/* Intro text */
+.intro {
+  z-index: 1;
+  animation: fadeInUp 0.9s 0.1s ease both;
 }
-.cv{
-    background-color: rgb(19, 19, 36);
-    border: 1.5px solid rgb(47, 92, 109);
-    color: rgb(116, 153, 178);
-    outline: none;
-    
-}
-.cv:hover{
 
-    background-color: bisque;
-    color: #000;
-    border: none;
+.intro > p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.06em;
 }
-.cont{
-    background-color:rgb(79, 149, 235) ;
-    border: none;
+.intro > h2 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+  animation: fadeInUp 0.9s 0.25s ease both;
 }
-.cont:hover{
-    background-color: bisque;
+.intro > h6 {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 500;
+  color: var(--accent2);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.8rem;
+  animation: fadeInUp 0.9s 0.4s ease both;
+}
+
+/* Buttons */
+.intro > button {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.cv {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  margin-right: 0.75rem;
+  animation: fadeInUp 0.9s 0.55s ease both;
+}
+.cv:hover {
+  background: var(--accent);
+  color: #0d0d1a;
+  box-shadow: 0 6px 24px rgba(79, 158, 248, 0.35);
+  transform: translateY(-2px);
+}
+.cont {
+  background: var(--accent);
+  border: none;
+  color: #0d0d1a;
+  animation: fadeInUp 0.9s 0.65s ease both;
+}
+.cont a { color: #0d0d1a; text-decoration: none; }
+.cont:hover {
+  background: #6eb3ff;
+  box-shadow: 0 6px 24px rgba(79, 158, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 6vw;
+    gap: 1.5rem;
+  }
+  .links { flex-direction: row; }
 }
