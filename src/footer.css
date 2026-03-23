@@ -1,7 +1,7 @@
 .footer{
     
   width: 98vw;
-  height: 38vh;
+  height: 25vh;
   background-color: #5895ba;
 }
 .footer>h2{
@@ -15,6 +15,10 @@
     margin-right: 5vw;
     font-size: large;
     font-weight: 700;
+    text-decoration: none;
+}
+.head>a:hover{
+  color: #afcbdc;
 }
 
 .link>a>img{

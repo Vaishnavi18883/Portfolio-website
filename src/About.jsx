@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './about.css';
 import Photo from'./images/Photo.jpg';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 
