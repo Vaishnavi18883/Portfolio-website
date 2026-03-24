@@ -1,6 +1,5 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import Hero from './Hero';
@@ -10,15 +9,13 @@ import Education from './Education';
 import Contact from './Contact';
 import Footer from './Footer';
 
-
 function App() {
   return (
-
-    <div >
-      <Header/>
+    <div>
+      <Header />
       <Routes>
         <Route
-         path="/"
+          path="/"
           element={
             <>
               <section id="hero"><Hero /></section>
@@ -27,11 +24,10 @@ function App() {
               <section id="education"><Education /></section>
               <section id="contact"><Contact /></section>
             </>
-          }/>
-         
+          }
+        />
       </Routes>
-      
-      <Footer/>
+      <Footer />
     </div>
   );
 }
